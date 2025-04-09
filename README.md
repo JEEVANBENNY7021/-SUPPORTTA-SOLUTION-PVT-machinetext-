@@ -48,6 +48,15 @@ A RESTful API for Product Management with **User/Admin Authentication**, **Role-
 ```bash
 git clone https://github.com/JEEVANBENNY7021/-SUPPORTTA-SOLUTION-PVT-machinetext-.git
 
+
+.env(file)
+PORT=5000
+MONGODB_URI=mongodb+srv://jeevanbenny2002:luminar@cluster0.olqf7vc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+JWT_SECRET=your_jwt_secret
+ADMIN_SECRET_KEY=your_super_secret_key_here
+
+
+
 cd supportta
 npm install
 npm install bcryptjs jsonwebtoken mongoose express cors dotenv        
