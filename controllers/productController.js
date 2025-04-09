@@ -1,6 +1,8 @@
 const Product = require('../models/Product');
 const generateProductId = require('../utils/productIdGenerator');
 
+
+// product creation
 exports.createProduct = async (req, res) => {
   const { name, description, price, category } = req.body;
   const image = req.file ? `/public/${req.file.filename}` : null;
@@ -19,6 +21,8 @@ exports.createProduct = async (req, res) => {
   res.status(201).json({ message: 'Product created' });
 };
 
+
+// all products
 exports.getAllProducts = async (req, res) => {
   let { page = 1, search = '', sort = '', minPrice, maxPrice, category } = req.query;
 
@@ -42,12 +46,15 @@ exports.getAllProducts = async (req, res) => {
   res.json(products);
 };
 
+
 exports.getProductDetails = async (req, res) => {
   const product = await Product.findOne({ productId: req.params.id });
   if (!product) return res.status(404).json({ message: 'Product not found' });
   res.json(product);
 };
 
+
+// update  product
 exports.updateProduct = async (req, res) => {
   const product = await Product.findOne({ productId: req.params.id });
   if (!product) return res.status(404).json({ message: 'Product not found' });
@@ -61,6 +68,7 @@ exports.updateProduct = async (req, res) => {
   res.json({ message: 'Product updated' });
 };
 
+// delete product
 exports.deleteProduct = async (req, res) => {
     try {
       const product = await Product.findOne({ productId: req.params.id });

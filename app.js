@@ -10,11 +10,12 @@ app.use(cors());
 app.use(express.json());
 app.use('/public', express.static('uploads/public'));
 
+// ROUTES
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 
-// Error handling middleware
+// Error handling 
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });

@@ -25,8 +25,9 @@ exports.auth = (req, res, next) => {
     }
   };
   
-// Add this to your auth middleware file
-exports.isAdmin = (req, res, next) => {
+
+
+  exports.isAdmin = (req, res, next) => {
     if (req.user.role !== 'admin') {
       return res.status(403).json({
         success: false,
@@ -35,8 +36,8 @@ exports.isAdmin = (req, res, next) => {
     }
     next();
   };
-// 👇 Add this:
-exports.isOwnerOrAdmin = async (req, res, next) => {
+
+  exports.isOwnerOrAdmin = async (req, res, next) => {
   const userIdFromToken = req.user.userId;
   const userRole = req.user.role;
 

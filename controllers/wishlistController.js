@@ -1,5 +1,7 @@
 const Wishlist = require('../models/wishlist.js');
 
+
+// ADD TO WISHLIST
 exports.addToWishlist = async (req, res) => {
   const { productId } = req.body;
   let wishlist = await Wishlist.findOne({ userId: req.user.userId });
@@ -17,6 +19,9 @@ exports.addToWishlist = async (req, res) => {
   res.json({ message: 'Added to wishlist' });
 };
 
+
+// REMOVE FROM WISHLIST
+
 exports.removeFromWishlist = async (req, res) => {
   const { productId } = req.body;
   const wishlist = await Wishlist.findOne({ userId: req.user.userId });
@@ -28,6 +33,8 @@ exports.removeFromWishlist = async (req, res) => {
   res.json({ message: 'Removed from wishlist' });
 };
 
+
+// GET WISHLIST
 exports.getWishlist = async (req, res) => {
   const wishlist = await Wishlist.findOne({ userId: req.user.userId });
   res.json(wishlist?.products || []);

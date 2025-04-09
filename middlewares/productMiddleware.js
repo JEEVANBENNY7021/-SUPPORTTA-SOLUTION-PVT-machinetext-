@@ -1,4 +1,3 @@
-// Create a new file productMiddleware.js
 const Product = require('../models/Product');
 
 exports.isOwnerOrAdmin = async (req, res, next) => {

@@ -3,6 +3,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const generateUserId = require('../utils/userIdGenerator');
 
+
+
+// user register
+
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -21,6 +25,8 @@ exports.register = async (req, res) => {
   await newUser.save();
   res.status(201).json({ message: 'User registered' });
 };
+
+// user login
 
 exports.login = async (req, res) => {
     try {
@@ -83,6 +89,9 @@ exports.login = async (req, res) => {
       });
     }
   };
+
+
+//   admin register
 
 exports.registerAdmin = async (req, res) => {
     try {

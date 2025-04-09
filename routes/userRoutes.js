@@ -2,7 +2,7 @@ const express = require('express');
 const { register, login, registerAdmin } = require('../controllers/userController');
 const router = express.Router();
 
-// Debug middleware
+// middleware
 router.use((req, res, next) => {
   console.log(`Request received for: ${req.method} ${req.path}`);
   next();
