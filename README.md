@@ -4,7 +4,7 @@ A RESTful API for Product Management with **User/Admin Authentication**, **Role-
 
 ---
 
-## 🚀 Features
+##  Features
 
 ### 1. Authentication & Authorization
 - User Registration & Login using JWT.
@@ -31,7 +31,7 @@ A RESTful API for Product Management with **User/Admin Authentication**, **Role-
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 - **Node.js + Express.js**
 - **MongoDB + Mongoose**
 - **JWT for Authentication**
