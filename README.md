@@ -42,7 +42,7 @@ A RESTful API for Product Management with **User/Admin Authentication**, **Role-
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 
 ```bash
