@@ -1,4 +1,4 @@
-# 🛒 Product Management API
+#  Product Management API
 
 A RESTful API for Product Management with **User/Admin Authentication**, **Role-based Access Control**, **Product CRUD with Image Upload**, **Search, Filter, Sort**, and **Wishlist functionality** using **Node.js**, **Express**, **MongoDB**, and **JWT**.
 
