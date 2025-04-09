@@ -50,3 +50,5 @@ git clone https://github.com/JEEVANBENNY7021/-SUPPORTTA-SOLUTION-PVT-machinetext
 
 cd supportta
 npm install
+npm install bcryptjs jsonwebtoken mongoose express cors dotenv        
+npm start
